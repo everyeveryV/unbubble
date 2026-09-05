@@ -1,0 +1,19 @@
+node_modules/
+.DS_Store
+*.log
+out/
+cache/
+.vercel/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local visual QA artifacts
+qa-*.png

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#252C23" />
+    <meta name="description" content="Unbubble — 比较、检查和 Fork 推荐算法。" />
+    <title>Unbubble — Open feed laboratory</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#feedWorkspace">跳到 Feed</a>
+
+    <header class="masthead">
+      <div class="brand-lockup">
+        <a class="brand" href="#" aria-label="Unbubble 首页">
+          <span class="brand-wordmark">unbubble</span>
+          <span class="brand-orbit" aria-hidden="true"></span>
+        </a>
+        <p>用开放feed算法来打破信息茧房</p>
+      </div>
+      <div class="topic-lockup">
+        <span>当前议题</span>
+        <strong>Meme 是链上文化创新，还是注意力投机？</strong>
+      </div>
+      <div class="network-lockup">
+        <span class="network-dot" aria-hidden="true"></span>
+        <span id="networkLabel">Monad Testnet · 10143</span>
+        <div class="language-switch" role="group" aria-label="Language / 语言">
+          <button class="active" type="button" data-language="zh" aria-pressed="true">中文</button>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="button button-dark" id="walletButton" type="button">连接钱包</button>
+      </div>
+    </header>
+
+    <section class="hero-intro" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="hero-symbol" aria-hidden="true">
+          <span class="hero-wordmark">unbubble</span>
+          <span class="brand-orbit"></span>
+        </div>
+        <div class="hero-copy-bottom">
+          <p class="hero-kicker">看见推荐背后的选择</p>
+          <h1 id="heroTitle">用开放 Feed 算法，打破信息茧房。</h1>
+          <p class="hero-lede">同一组内容，两种排序。亲手改变规则，观察世界如何随之改变。</p>
+          <a class="hero-cta" href="#feedWorkspace"><span>开始比较</span><b aria-hidden="true">↘</b></a>
+        </div>
+      </div>
+
+      <div class="hero-collage" aria-label="产品功能预览">
+        <article class="hero-card hero-card-feed">
+          <header><span>同一内容池</span><strong>20 / 20</strong></header>
+          <div class="mini-feeds" aria-hidden="true">
+            <div><i></i><i></i><i></i><i></i></div>
+            <b>≠</b>
+            <div><i></i><i></i><i></i><i></i></div>
+          </div>
+          <footer><span>互动优先</span><span>开放视角</span></footer>
+        </article>
+
+        <article class="hero-card hero-card-recipe">
+          <span class="hero-card-icon" aria-hidden="true">桥</span>
+          <div><small>算法配方</small><strong>平衡视角</strong><p>相关，同时遇见不同</p></div>
+        </article>
+
+        <article class="hero-card hero-card-question">
+          <span aria-hidden="true">◌</span>
+          <p>是谁，用什么规则，决定你看见什么？</p>
+        </article>
+
+        <article class="hero-card hero-card-path">
+          <div>
+            <small>观点路径</small>
+            <strong>已覆盖 2 / 5</strong>
+          </div>
+          <span class="mini-path" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        </article>
+
+        <article class="hero-card hero-card-metric">
+          <small>来源多样性</small><strong>90%</strong>
+          <div aria-hidden="true"><i></i></div>
+          <p>16 个独立来源</p>
+        </article>
+
+        <article class="hero-card hero-card-chain">
+          <small>Monad Testnet</small>
+          <strong>配方可验证</strong>
+          <span><i aria-hidden="true"></i><em>已上链</em></span>
+        </article>
+      </div>
+    </section>
+
+    <div class="status-strip" role="status" aria-live="polite">
+      <span><strong>20</strong> 条公开内容</span>
+      <span><strong id="sourceCount">—</strong> 个独立来源</span>
+      <span>策展快照 · 2026-09-05</span>
+      <span>原始链接可查</span>
+      <button id="recalibrateButton" class="text-button" type="button">重新校准立场</button>
+    </div>
+
+    <main class="workspace" id="feedWorkspace">
+      <aside class="control-rail" aria-label="算法控制">
+        <section class="rail-section stance-readout">
+          <div class="section-heading">
+            <h2>你的立场</h2>
+            <output id="stanceValue">0.00</output>
+          </div>
+          <div class="stance-axis" aria-hidden="true">
+            <span>文化</span><i id="stanceMarker"></i><span>投机</span>
+          </div>
+          <p id="stanceCopy">完成五题校准后生成本次会话的立场坐标。</p>
+        </section>
+
+        <section class="rail-section">
+          <div class="section-heading">
+            <h2>茧房距离</h2>
+            <output id="distanceValue">平衡 · 0.40</output>
+          </div>
+          <input id="distanceControl" class="distance-range" type="range" min="0" max="2" step="1" value="1" aria-label="Open Feed 目标观点距离" />
+          <div class="range-labels" aria-hidden="true"><span>熟悉</span><span>平衡</span><span>探索</span></div>
+          <p>寻找接近目标距离的观点，不把“更远”误当成“更好”。</p>
+        </section>
+
+        <section class="rail-section recipe-section">
+          <div class="section-heading">
+            <h2>你希望 Open Feed 更看重什么？</h2>
+          </div>
+          <p class="recipe-intro">选择一种阅读目标。只改变 Open Feed 的排序，不更换这 20 条内容。</p>
+          <div class="recipe-tabs" id="recipeTabs" role="tablist" aria-label="算法配方"></div>
+          <p class="recipe-effect" id="recipeEffect"></p>
+          <details class="advanced-settings" id="advancedSettings">
+            <summary><span>高级设置</span><small>6 项排序权重</small><output id="weightTotal">100%</output></summary>
+            <div id="weightControls" class="weight-controls"></div>
+            <button class="button button-outline full-width" id="resetWeights" type="button">恢复预设参数</button>
+          </details>
+        </section>
+
+        <section class="rail-section publish-section">
+          <div class="publish-copy">
+            <div class="lineage" aria-label="配方继承关系">
+              <span id="baseRecipeLabel">#1 Bridge Builder</span><b aria-hidden="true">/</b><span id="lineageCurrent">预览中</span>
+            </div>
+            <p id="recipeActionHint">普通用户可以直接使用；只有修改权重时才需要发布新版本。</p>
+          </div>
+          <div class="publish-actions">
+            <button class="button button-teal full-width" id="useRecipeButton" type="button">使用这套排序方式</button>
+            <button class="button button-inverse full-width" id="forkRecipeButton" type="button">复制并修改</button>
+            <button class="button button-teal full-width" id="publishButton" type="button" hidden disabled>发布为新版本</button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="feed-stage" aria-label="Feed 比较">
+        <nav class="mobile-tabs" aria-label="Feed 视图">
+          <button type="button" data-view="engagement">Engagement</button>
+          <button class="active" type="button" data-view="compare">并排比较</button>
+          <button type="button" data-view="open">Open</button>
+          <button type="button" data-view="raw">Raw</button>
+        </nav>
+
+        <div class="comparison-head">
+          <div class="feed-title engagement-title">
+            <span class="feed-index">A</span>
+            <div><h1>Engagement Feed</h1><p>更像你，更可能让你继续停留</p></div>
+          </div>
+          <div class="same-pool-stamp"><span>same pool</span><strong>20 / 20</strong></div>
+          <div class="feed-title open-title">
+            <span class="feed-index">B</span>
+            <div><h1>Open Feed</h1><p>相关，同时引入新的来源和视角</p></div>
+          </div>
+        </div>
+
+        <div class="feed-columns" id="feedColumns">
+          <div class="feed-column engagement-column" id="engagementFeed" aria-label="Engagement Feed"></div>
+          <div class="pool-spine" aria-hidden="true"></div>
+          <div class="feed-column open-column" id="openFeed" aria-label="Open Feed"></div>
+          <div class="feed-column raw-column" id="rawFeed" aria-label="Raw Pool"></div>
+        </div>
+      </section>
+
+      <aside class="metrics-rail" aria-label="Feed 营养标签">
+        <section class="metric-header">
+          <span>当前读数</span>
+          <h2>Feed 营养标签</h2>
+          <div class="metric-switch" role="group" aria-label="选择指标对应 Feed">
+            <button id="metricEngagement" type="button">Engagement</button>
+            <button id="metricOpen" class="active" type="button">Open</button>
+          </div>
+        </section>
+        <div id="nutritionMetrics" class="nutrition-metrics"></div>
+        <section class="bridge-path">
+          <div class="section-heading"><h2>观点路径</h2><output id="readProgress">0 / 5</output></div>
+          <p class="path-intro">打开内容或查看排序原因后点亮；它不是分数。</p>
+          <ol id="bridgePath">
+            <li data-step="0"><span></span>你的立场</li>
+            <li data-step="1"><span></span>相近观点</li>
+            <li data-step="2"><span></span>共同事实</li>
+            <li data-step="3"><span></span>不同观点</li>
+            <li data-step="4"><span></span>更远视角</li>
+          </ol>
+        </section>
+        <section class="method-note">
+          <h2>标签方法</h2>
+          <p>本快照采用人工策展与公开规则标注。立场和证据信号是可质疑的分类，不是事实裁决。</p>
+          <button class="text-button" id="methodButton" type="button">查看标注尺度</button>
+        </section>
+      </aside>
+    </main>
+
+    <dialog id="calibrationDialog" class="calibration-dialog">
+      <form method="dialog" id="calibrationForm">
+        <div class="dialog-kicker">5 个判断 · 约 25 秒</div>
+        <h2>先定位你现在站在哪里</h2>
+        <p>答案只保存在这个浏览器会话中，不会上链。</p>
+        <div class="calibration-progress"><i id="calibrationProgress"></i></div>
+        <fieldset>
+          <legend id="calibrationQuestion"></legend>
+          <div class="answer-grid">
+            <button type="button" data-answer="-1"><span>反对</span><small>更接近文化实验</small></button>
+            <button type="button" data-answer="0"><span>不确定</span><small>需要更多背景</small></button>
+            <button type="button" data-answer="1"><span>赞同</span><small>更接近投机判断</small></button>
+          </div>
+        </fieldset>
+        <button class="text-button dialog-skip" id="calibrationSkip" type="button">使用中立立场浏览</button>
+      </form>
+    </dialog>
+
+    <dialog id="detailDialog" class="detail-dialog">
+      <button class="dialog-close" data-close-dialog="detailDialog" type="button" aria-label="关闭">×</button>
+      <div id="detailContent"></div>
+    </dialog>
+
+    <dialog id="publishDialog" class="publish-dialog">
+      <button class="dialog-close" data-close-dialog="publishDialog" type="button" aria-label="关闭">×</button>
+      <div id="publishContent"></div>
+    </dialog>
+
+    <dialog id="methodDialog" class="method-dialog">
+      <button class="dialog-close" data-close-dialog="methodDialog" type="button" aria-label="关闭">×</button>
+      <div class="dialog-kicker">公开标注规则</div>
+      <h2>分类是输入，不是结论</h2>
+      <dl class="method-grid">
+        <div><dt>立场 −1</dt><dd>强调文化表达、社区归属或公共用途。</dd></div>
+        <div><dt>立场 0</dt><dd>描述现象、数据或同时呈现两面。</dd></div>
+        <div><dt>立场 +1</dt><dd>强调投机、操纵、波动或消费者风险。</dd></div>
+        <div><dt>证据 0–1</dt><dd>按原始数据、方法说明和可追溯引用的完整度标注。</dd></div>
+      </dl>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./src/app.mjs"></script>
+  </body>
+</html>

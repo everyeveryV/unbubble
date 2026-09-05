@@ -1,0 +1,97 @@
+export const messages = {
+  zh: {
+    brandTag: '用开放feed算法来打破信息茧房', currentTopic: '当前议题', topic: 'Meme 是链上文化创新，还是注意力投机？',
+    heroKicker: '看见推荐背后的选择', heroTitle: '用开放 Feed 算法，打破信息茧房。', heroLead: '同一组内容，两种排序。亲手改变规则，观察世界如何随之改变。', heroCta: '开始比较', heroPreviewLabel: '产品功能预览', heroPool: '同一内容池', heroRecipeHint: '相关，同时遇见不同', heroQuestion: '是谁，用什么规则，决定你看见什么？', heroPath: '观点路径', heroPathProgress: '2 / 5', heroSourceCount: '16 个独立来源', heroNetwork: 'Monad 测试网', heroVerified: '配方可验证', heroOnchain: '已上链',
+    network: 'Monad Testnet · 10143', connectWallet: '连接钱包', recalibrate: '重新校准立场',
+    contentCount: '条公开内容', sourceCount: '个独立来源', snapshot: '策展快照 · 2026-09-05', originalLinks: '原始链接可查',
+    yourStance: '你的立场', culture: '文化', speculation: '投机', stanceLead: '当前更接近：{value}。只在本次浏览器会话保存。',
+    stanceCulture: '更看重文化与社区价值', stanceRisk: '更警惕金融化与投机风险', stanceMiddle: '文化价值与投机风险之间',
+    bubbleDistance: '茧房距离', familiar: '熟悉', balanced: '平衡', explore: '探索', distanceDesc: '寻找接近目标距离的观点，不把“更远”误当成“更好”。',
+    recipe: '算法配方', recipeQuestion: '你希望 Open Feed 更看重什么？', recipeIntro: '选择一种阅读目标。只改变 Open Feed 的排序，不更换这 20 条内容。',
+    presetBridge: '平衡视角', presetBridgeDesc: '从熟悉内容逐步走向不同观点', presetSource: '多元来源', presetSourceDesc: '减少同一媒体和作者重复出现', presetEvidence: '证据优先', presetEvidenceDesc: '研究、数据和原始资料排在前面',
+    bridgeEffect: '当前效果：保留议题相关性，同时循序引入距离更远的观点。', sourceEffect: '当前效果：优先扩大来源范围，减少同一媒体反复占据前列。', evidenceEffect: '当前效果：优先展示证据完整、方法和出处更清晰的内容。',
+    advancedSettings: '高级设置', sixWeights: '6 项排序权重', resetRecipe: '恢复预设参数', unpublishedFork: '尚未保存', forkPublish: '保存这套排序规则',
+    previewing: '预览中', inUse: '正在使用', editingFork: '正在修改副本', useRecipe: '使用这套排序方式', copyModify: '复制并修改', cancelModify: '取消修改', publishVersion: '发布为新版本', actionHint: '普通用户可以直接使用；只有修改权重时才需要发布新版本。', editHint: '这是原配方的副本。调整高级设置后，可以导出或发布为新版本。', adjustFirst: '先调整至少一项权重', recipeApplied: '已开始使用“{name}”', forkStarted: '已创建可编辑副本；原配方不会被改变', forkCancelled: '已取消修改并恢复原配方',
+    publishDesc: '可导出规则，也可在配置合约后发布到 Monad。', mobileEngagement: '互动优先', compare: '双流对比', mobileOpen: '开放视角', mobileRaw: '原始内容', engagementDesc: '更像你，更可能让你继续停留', openDesc: '相关，同时引入新的来源和视角', samePool: 'same pool', sameInput: '同一输入',
+    currentRead: '正在分析', nutrition: '这条 Feed 由什么构成？', path: '你已经看过哪些视角？', pathIntro: '打开内容或查看排序原因后点亮；它不是分数。', pathProgress: '已覆盖 {current} / 5', path0: '起点：你的立场', path1: '看过相近观点', path2: '看过强证据内容', path3: '看过不同观点', path4: '看过更远视角',
+    labelMethod: '标签方法', labelMethodDesc: '本快照采用人工策展与公开规则标注。立场和证据信号是可质疑的分类，不是事实裁决。', seeScale: '查看标注尺度',
+    calibrationHeading: '先定位你现在站在哪里', calibrationPrivacy: '答案只保存在这个浏览器会话中，不会上链。', calibrationKicker: '{current} / {total} · 约 25 秒',
+    disagree: '反对', disagreeHint: '更接近文化实验', uncertain: '不确定', uncertainHint: '需要更多背景', agree: '赞同', agreeHint: '更接近投机判断', neutral: '使用中立立场浏览',
+    methodKicker: '公开标注规则', methodHeading: '分类是输入，不是结论', methodMinus: '强调文化表达、社区归属或公共用途。', methodZero: '描述现象、数据或同时呈现两面。', methodPlus: '强调投机、操纵、波动或消费者风险。', methodEvidence: '按原始数据、方法说明和可追溯引用的完整度标注。',
+    relevance: '议题相关', distance: '桥接距离', novelty: '来源新颖', evidence: '证据强度', exploration: '探索扰动', repetition: '重复惩罚', similarity: '立场相似', engagement: '停留潜力', recency: '时间新鲜',
+    distanceScore: '立场距离 {value}', similarityScore: '立场接近 {value}%', whyHere: '为什么排这里？', original: '查看原文 ↗', scoreTitle: '排序总分',
+    near: '近邻观点', nearHint: '与你当前立场接近', bridge: '桥接观点', bridgeHint: '介于熟悉与明显不同之间', different: '不同观点', differentHint: '与你当前立场距离较远', variety: '来源多样性', varietyHint: '前 10 条包含多少不同来源', concentration: '单一来源集中度', concentrationHint: '占比最高的来源；越低越分散', strongEvidence: '强证据内容', strongEvidenceHint: '达到当前证据强度门槛', primarySources: '原始 / 研究来源', primarySourcesHint: '监管资料、研究报告等来源', metricNote: '前三项合计 100%；其余指标独立计算。比例描述内容构成，不代表好坏。',
+    receipt: '排序收据 · {feed}', totalScore: '总排序分', confidence: '标注置信度', stanceCoordinate: '观点坐标', stanceCoordinateValue: '{value}（−1 文化 / +1 投机）', conflict: '利益关系', source: '来源', humanCurated: '人工策展',
+    publishKicker: '可还原配方 · Monad Testnet', publishHeading: 'Fork {name}', publishIntro: '这笔记录包含六项权重、父配方编号和内容清单指纹；文章与浏览历史不上链。', fingerprint: '配方指纹', manifest: '内容清单', registry: 'Registry：{address}', registryMissing: '本地演示尚未配置 Registry 地址。部署 contracts/OpenFeedRegistry.sol 后，在 src/config.mjs 填入地址即可发送真实交易。', exportJson: '导出 JSON', sendTransaction: '发送链上交易', chainNotReady: '链上条件未就绪', connectFirst: '先连接钱包',
+    stanceUpdated: '立场坐标已更新为 {value}', resetDone: '已恢复当前配方', exported: '配方 JSON 已导出', noWallet: '未检测到 EVM 钱包；仍可完整体验离线排序。', walletConnected: '钱包已连接到 Monad Testnet', walletFailed: '钱包连接未完成', transactionSent: '交易已提交到 Monad Testnet', transactionFailed: '交易没有提交', connectedNetwork: 'Monad Testnet · 已连接', normalized: '{value}% → 归一化', close: '关闭',
+  },
+  en: {
+    brandTag: 'Break the filter bubble with an open-feed algorithm', currentTopic: 'Current question', topic: 'Are memecoins onchain culture—or attention speculation?',
+    heroKicker: 'See the choices behind recommendations', heroTitle: 'Break the filter bubble with an open feed.', heroLead: 'The same content, ranked two ways. Change the rules and watch your view of the world change with them.', heroCta: 'Start comparing', heroPreviewLabel: 'Product feature preview', heroPool: 'Same content pool', heroRecipeHint: 'Relevant, with different views', heroQuestion: 'Who decides what you see—and by which rules?', heroPath: 'Viewpoint path', heroPathProgress: '2 / 5', heroSourceCount: '16 independent sources', heroNetwork: 'Monad Testnet', heroVerified: 'Verifiable recipe', heroOnchain: 'Onchain',
+    network: 'Monad Testnet · 10143', connectWallet: 'Connect wallet', recalibrate: 'Recalibrate stance',
+    contentCount: 'public items', sourceCount: 'independent sources', snapshot: 'Curated snapshot · 2026-09-05', originalLinks: 'Original links available',
+    yourStance: 'Your stance', culture: 'Culture', speculation: 'Speculation', stanceLead: 'Closest to: {value}. Saved only for this browser session.',
+    stanceCulture: 'culture and community value', stanceRisk: 'financialization and speculation risk', stanceMiddle: 'the middle between cultural value and speculation risk',
+    bubbleDistance: 'Bubble distance', familiar: 'Familiar', balanced: 'Balanced', explore: 'Explore', distanceDesc: 'Find viewpoints near the target distance. Farther does not automatically mean better.',
+    recipe: 'Algorithm recipe', recipeQuestion: 'What should Open Feed prioritize?', recipeIntro: 'Choose a reading goal. This only reorders Open Feed; the same 20 items remain in the pool.',
+    presetBridge: 'Balanced views', presetBridgeDesc: 'Move gradually from familiar to different views', presetSource: 'More sources', presetSourceDesc: 'Reduce repeated outlets and authors', presetEvidence: 'Evidence first', presetEvidenceDesc: 'Move research, data, and primary sources up',
+    bridgeEffect: 'Current effect: preserve relevance while gradually introducing more distant viewpoints.', sourceEffect: 'Current effect: broaden the source mix and prevent one outlet from dominating the top ranks.', evidenceEffect: 'Current effect: prioritize items with stronger evidence, clearer methods, and traceable sources.',
+    advancedSettings: 'Advanced settings', sixWeights: '6 ranking weights', resetRecipe: 'Restore preset values', unpublishedFork: 'Not saved yet', forkPublish: 'Save this ranking rule',
+    previewing: 'Previewing', inUse: 'In use', editingFork: 'Editing a copy', useRecipe: 'Use this ranking rule', copyModify: 'Copy and modify', cancelModify: 'Cancel changes', publishVersion: 'Publish as a new version', actionHint: 'Most people can use this rule directly. Publish a new version only after changing its weights.', editHint: 'This is a copy of the original rule. Adjust advanced settings, then export or publish it as a new version.', adjustFirst: 'Change at least one weight first', recipeApplied: 'Now using “{name}”', forkStarted: 'Editable copy created; the original recipe will not change', forkCancelled: 'Changes cancelled and original recipe restored',
+    publishDesc: 'Export the rule now, or publish it to Monad after the contract is configured.', mobileEngagement: 'Engagement', compare: 'Compare', mobileOpen: 'Open views', mobileRaw: 'Raw pool', engagementDesc: 'More like you, and more likely to keep you engaged', openDesc: 'Relevant, with new sources and perspectives', samePool: 'same pool', sameInput: 'same input',
+    currentRead: 'Analyzing', nutrition: 'What is this feed made of?', path: 'Which perspectives have you seen?', pathIntro: 'Open an item or its ranking receipt to light these up. This is not a score.', pathProgress: '{current} / 5 covered', path0: 'Start: your stance', path1: 'Seen a nearby view', path2: 'Seen strong evidence', path3: 'Seen a different view', path4: 'Seen a farther view',
+    labelMethod: 'Label method', labelMethodDesc: 'This snapshot uses human curation and published rules. Stance and evidence signals are contestable classifications—not factual verdicts.', seeScale: 'View labeling scale',
+    calibrationHeading: 'First, locate where you stand', calibrationPrivacy: 'Answers stay in this browser session and are never put onchain.', calibrationKicker: '{current} / {total} · about 25 sec',
+    disagree: 'Disagree', disagreeHint: 'Closer to culture', uncertain: 'Unsure', uncertainHint: 'Need more context', agree: 'Agree', agreeHint: 'Closer to speculation', neutral: 'Browse with a neutral stance',
+    methodKicker: 'Published labeling rules', methodHeading: 'Classification is input, not conclusion', methodMinus: 'Emphasizes cultural expression, community belonging, or public purpose.', methodZero: 'Describes evidence or presents both sides.', methodPlus: 'Emphasizes speculation, manipulation, volatility, or consumer risk.', methodEvidence: 'Rated by the completeness of primary data, methodology, and traceable citations.',
+    relevance: 'Relevance', distance: 'Bridge distance', novelty: 'Source novelty', evidence: 'Evidence', exploration: 'Exploration', repetition: 'Repetition penalty', similarity: 'Stance similarity', engagement: 'Engagement', recency: 'Recency',
+    distanceScore: 'Stance distance {value}', similarityScore: '{value}% stance match', whyHere: 'Why is this here?', original: 'Original source ↗', scoreTitle: 'Ranking score',
+    near: 'Nearby views', nearHint: 'Close to your current stance', bridge: 'Bridge views', bridgeHint: 'Between familiar and clearly different', different: 'Different views', differentHint: 'Farther from your current stance', variety: 'Source variety', varietyHint: 'Different sources among the top 10', concentration: 'Top-source concentration', concentrationHint: 'Share of the largest source; lower is more dispersed', strongEvidence: 'Strong-evidence items', strongEvidenceHint: 'Items above the evidence threshold', primarySources: 'Primary / research sources', primarySourcesHint: 'Regulatory material, research, and primary sources', metricNote: 'The first three add to 100%; other metrics are independent. These ratios describe composition, not quality.',
+    receipt: 'Ranking receipt · {feed}', totalScore: 'Total ranking score', confidence: 'Label confidence', stanceCoordinate: 'Stance coordinate', stanceCoordinateValue: '{value} (−1 culture / +1 speculation)', conflict: 'Conflict context', source: 'Source', humanCurated: 'Human-curated',
+    publishKicker: 'Restorable recipe · Monad Testnet', publishHeading: 'Fork {name}', publishIntro: 'This record contains six weights, a parent recipe ID, and a content-manifest fingerprint. Articles and reading history stay offchain.', fingerprint: 'Recipe fingerprint', manifest: 'Content manifest', registry: 'Registry: {address}', registryMissing: 'No Registry address is configured for this local demo. Deploy contracts/OpenFeedRegistry.sol, then add the address in src/config.mjs to enable real transactions.', exportJson: 'Export JSON', sendTransaction: 'Send transaction', chainNotReady: 'Onchain setup incomplete', connectFirst: 'Connect wallet first',
+    stanceUpdated: 'Stance updated to {value}', resetDone: 'Current recipe restored', exported: 'Recipe JSON exported', noWallet: 'No EVM wallet detected. The offline ranking demo still works in full.', walletConnected: 'Wallet connected to Monad Testnet', walletFailed: 'Wallet connection was not completed', transactionSent: 'Transaction submitted to Monad Testnet', transactionFailed: 'Transaction was not submitted', connectedNetwork: 'Monad Testnet · connected', normalized: '{value}% → normalized', close: 'Close',
+  },
+};
+
+export const calibrationQuestionsEn = [
+  'A memecoin’s main value comes from expectations of price appreciation, not the community itself.',
+  'Turning internet culture into a tradable asset inevitably harms that culture.',
+  'Even without traditional utility, a token that creates shared identity produces real value.',
+  'Fair launches and transparent rules can significantly reduce the speculative harm of memecoins.',
+  'Most memecoins ultimately resemble attention lotteries rather than sustainable public culture.',
+];
+
+export const contentEn = {
+  'sec-statement': { title: 'SEC Staff Statement on Meme Coins', summary: 'A regulatory view of the entertainment, social, and cultural uses of memecoins, while noting that their value is driven mainly by market demand and speculation.' },
+  'galaxy-state': { summary: 'Frames memecoins as an infrastructure-enabled flywheel of user growth and cultural speculation, and examines their extreme power-law distribution.' },
+  'galaxy-evolution': { summary: 'Traces memes from units of cultural replication to onchain expression, arguing that financial incentives accelerate cultural transmission while changing its meaning.' },
+  'coingecko-state-2025': { summary: 'Uses market size, narrative categories, and trading data to map a memecoin cycle in which cultural heat and capital flows move together.' },
+  'coingecko-q2': { summary: 'Data shows memecoins became one of the quarter’s most watched crypto narratives, offering measurable context for the concentration of attention.' },
+  'vitalik-memecoins': { summary: 'Proposes charity coins and games with public value, asking how the entertainment of memecoins could serve positive-sum goals.' },
+  'wired-art': { summary: 'Uses cases such as Dogecoin to examine how jokes, community, and speculation intertwine—and why early and late participants face different risks.' },
+  'axios-narrative': { summary: 'Argues that when crypto lacks a clear overarching narrative, memecoins become highly efficient containers for capital and attention.' },
+  'a16z-policy': { summary: 'Separates memes as internet-cultural expression from purely speculative projects and argues that policy can mistakenly reward tokens with little substance.' },
+  'time-trump': { summary: 'Examines political branding, conflicts of interest, and extreme volatility, showing the trust problems created when cultural symbols are rapidly financialized.' },
+  'ap-libra': { summary: 'The $LIBRA episode exposes information asymmetry among promoters, political figures, and retail buyers, highlighting insider advantage and trust risk.' },
+  'cointelegraph-living-ads': { summary: 'Investigates bounty-driven public stunts and how attention markets can turn participants themselves into advertising media.' },
+  'first-monday-play': { summary: 'A media-studies account of how play, performed identity, and speculative imagination jointly shape memecoin participation.' },
+  'arxiv-bridge': { summary: 'Combines visual, textual, community, and financial data to directly measure connections between cultural expression and market behavior.' },
+  'arxiv-fragility': { summary: 'Builds a fragility framework for studying liquidity and market-structure instability in assets driven by community narratives.' },
+  'arxiv-risk-launches': { summary: 'Publishes a dataset for identifying high-risk launches, shifting debate from moral judgment to testable onchain behavior.' },
+  'binance-rise': { summary: 'Reviews fair launches, low unit prices, social distribution, and rapid narrative spread while warning about concentration and information asymmetry.' },
+  'coinbase-basics': { summary: 'An introductory account of cultural visibility and high-return expectations, emphasizing that most projects have little functionality and carry high risk.' },
+  'gitcoin-degen-regen': { summary: 'Places speculative entertainment and public-goods culture on one path, asking whether community attention can be redirected toward constructive collaboration.' },
+  'economic-times-credibility': { summary: 'Asks whether memecoin mania diverts attention and talent from long-term work on infrastructure, identity, and public applications.' },
+};
+
+export const sourceTypeEn = { 官方资料: 'Official material', 研究报告: 'Research', 当事人观点: 'First-person view', 新闻报道: 'News', 社区评论: 'Community commentary' };
+export const conflictEn = {
+  '监管机构立场；声明不代表委员会正式规则': 'Regulatory staff view; not a formal Commission rule', '加密金融服务机构': 'Crypto financial-services firm', '加密市场数据平台': 'Crypto market-data platform',
+  '区块链生态核心参与者': 'Core blockchain ecosystem participant', 未知: 'Unknown', '加密行业投资机构': 'Crypto investment firm', '加密行业媒体': 'Crypto industry media',
+  '学术出版': 'Academic publication', '作者声明见论文': 'See author disclosures in the paper', '加密交易平台关联研究机构': 'Research arm associated with a crypto exchange',
+  '加密交易平台': 'Crypto exchange', 'Web3 公共物品资助网络': 'Web3 public-goods funding network',
+};
+
+export function formatMessage(template, variables = {}) {
+  return Object.entries(variables).reduce((value, [key, replacement]) => value.replaceAll(`{${key}}`, replacement), template);
+}

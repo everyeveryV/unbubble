@@ -1,0 +1,11 @@
+{
+  "name": "unbubble",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python -m http.server 4174 --bind 127.0.0.1",
+    "test": "node test/algorithms.test.mjs",
+    "check": "node --check src/app.mjs && node --check src/deploy.mjs && node --check src/algorithms.mjs && node --check src/evm.mjs && node --check src/config.mjs && node --check src/i18n.mjs && node --check data/feed.mjs"
+  }
+}

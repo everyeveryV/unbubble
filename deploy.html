@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f4ef" />
+    <meta name="description" content="Unbubble Monad Testnet 本地部署控制台" />
+    <title>Unbubble · Monad 部署控制台</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="deploy-console">
+    <header class="deploy-masthead">
+      <a class="brand" href="./" aria-label="返回 Unbubble">unbubble<span aria-hidden="true">●</span></a>
+      <div>
+        <span>本地管理工具</span>
+        <strong>Monad 部署控制台</strong>
+      </div>
+      <a class="text-button" href="./">返回产品</a>
+    </header>
+
+    <main class="deploy-shell">
+      <section class="deploy-brief">
+        <p class="deploy-kicker">OpenFeedRegistry</p>
+        <h1>把算法配方的继承关系放上测试网</h1>
+        <p class="deploy-lead">钱包只签署一笔合约部署交易。文章、立场校准和阅读历史不会上链。</p>
+
+        <dl class="deploy-facts">
+          <div><dt>目标网络</dt><dd>Monad Testnet · 10143</dd></div>
+          <div><dt>初始状态</dt><dd>3 套基础配方</dd></div>
+          <div><dt>链上内容</dt><dd>权重、父配方、创建者、内容清单哈希</dd></div>
+          <div><dt>链下内容</dt><dd>文章正文、用户答案、阅读行为</dd></div>
+        </dl>
+
+        <div class="deploy-build" aria-live="polite">
+          <span>本地构建</span>
+          <strong id="buildState">正在检查字节码…</strong>
+          <code id="buildFingerprint">—</code>
+        </div>
+      </section>
+
+      <section class="deploy-panel" aria-labelledby="deployHeading">
+        <header>
+          <span id="deployStage">准备中</span>
+          <h2 id="deployHeading">部署注册表</h2>
+          <p id="deployMessage">先连接安装了 MetaMask 或 Rabby 的浏览器钱包。</p>
+        </header>
+
+        <ol class="deploy-steps" id="deploySteps">
+          <li data-step="build"><i>1</i><span><strong>验证构建</strong><small>读取本地编译字节码</small></span></li>
+          <li data-step="wallet"><i>2</i><span><strong>连接钱包</strong><small>切换到 Monad Testnet</small></span></li>
+          <li data-step="transaction"><i>3</i><span><strong>签署部署</strong><small>钱包展示 Gas 后由你确认</small></span></li>
+          <li data-step="verify"><i>4</i><span><strong>链上校验</strong><small>读取合约代码与基础配方数量</small></span></li>
+        </ol>
+
+        <div class="deploy-wallet" id="walletSummary" hidden>
+          <span>部署账户</span><code id="walletAddress">—</code>
+          <span>测试网余额</span><strong id="walletBalance">—</strong>
+        </div>
+
+        <button class="button button-dark full-width" id="connectDeployWallet" type="button">连接浏览器钱包</button>
+        <button class="button button-teal full-width" id="deployRegistry" type="button" disabled>部署 OpenFeedRegistry</button>
+
+        <div class="deploy-result" id="deploymentResult" hidden>
+          <span>部署成功</span>
+          <strong id="contractAddress">—</strong>
+          <p id="verificationCopy">已检测到链上代码。</p>
+          <div>
+            <button class="button button-outline" id="copyContractAddress" type="button">复制地址</button>
+            <a class="button button-dark" id="explorerLink" href="#" target="_blank" rel="noopener noreferrer">在区块浏览器查看</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <p class="deploy-footnote">此页面只在本地使用。部署交易必须在钱包弹窗中由你确认。</p>
+    <script type="module" src="./src/deploy.mjs"></script>
+  </body>
+</html>
